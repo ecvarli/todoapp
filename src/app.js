@@ -17,6 +17,17 @@ const PORT = process.env.PORT || 41001
 
 connectToMongoDb()
 
+app.get("/emre", (req, res) => {
+  const asd = [{
+    id: "1",
+    name: "emre"
+  }, {
+    id: "2",
+    name: "fatih"
+  }]
+  res.status(500).send(asd)
+})
+
 app.listen(PORT, () => {
   if (PORT === 41001) {
     console.log(`>>> .env file is not set correctly.`)
